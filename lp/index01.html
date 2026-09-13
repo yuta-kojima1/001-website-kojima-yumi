@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秋のハンドメイドマルシェ ｜ 小島由美</title>
+<meta name="description" content="秋のハンドメイドマルシェ。2026年10月11日(日)・11月22日(日) 10:00–14:00、葛西用水ウッドデッキにて。ガラス製品・クラフト品の販売、ハンドマッサージ体験、オカリナ演奏。小島由美もガラス作品で出展します。">
+<meta name="theme-color" content="#f6f2e9">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="小島由美 グラスリッツェン教室・金継ぎ教室">
+<meta property="og:title" content="秋のハンドメイドマルシェ ｜ 小島由美">
+<meta property="og:description" content="2026.10.11 SUN / 11.22 SUN｜10:00–14:00｜葛西用水ウッドデッキ。ガラス作品で出展します。">
+<meta property="og:url" content="https://example.com/lp/">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:    #f6f2e9;
+    --paper-2:  #f1ecdf;
+    --panel:    #ece5d6;
+
+    --ink:      #2a251d;
+    --head:     #2c271f;
+    --text:     #453f34;
+    --muted:    #8c8472;
+    --line:     rgba(42,37,29,.14);
+
+    /* 秋のアクセント（アンバー／テラコッタ） */
+    --amber:    #bd7a34;
+    --amber-hi: #a15f27;
+    --gold:     #b18a3c;
+    --gold-hi:  #977322;
+    --leaf:     #9aa06a;   /* 枯葉のグリーン差し色 */
+
+    --serif: "Shippori Mincho", "Cormorant Garamond", serif;
+    --lat:   "Cormorant Garamond", "Shippori Mincho", serif;
+    --sans:  "Zen Kaku Gothic New", system-ui, sans-serif;
+
+    --edge: clamp(24px, 5vw, 60px);
+    --maxw: 1080px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.9;
+    letter-spacing:.02em;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(120% 80% at 85% -6%, rgba(189,122,52,.12), transparent 55%),
+      radial-gradient(90% 60% at 4% 106%, rgba(154,160,106,.08), transparent 60%);
+    background-attachment:fixed;
+  }
+  ::selection{ background:var(--amber); color:#fff; }
+  a{ color:inherit; text-decoration:none; }
+  img{ display:block; max-width:100%; }
+
+  body::before{
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
+    opacity:.045; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--edge); }
+  section{ position:relative; z-index:2; }
+  .eyebrow{
+    font-family:var(--lat); font-style:italic; font-size:1rem;
+    color:var(--amber-hi); letter-spacing:.14em; display:inline-block; margin-bottom:1rem;
+  }
+  .eyebrow .jp{
+    font-family:var(--sans); font-style:normal; font-size:.7rem; letter-spacing:.4em;
+    color:var(--muted); margin-left:1em; vertical-align:.15em;
+  }
+  h2.sec-title{
+    font-family:var(--serif); font-weight:500; line-height:1.4;
+    font-size:clamp(1.6rem, 4vw, 2.5rem); letter-spacing:.04em; margin-bottom:2.2rem; color:var(--head);
+  }
+
+  /* ---------- ヘッダー ---------- */
+  header{
+    position:fixed; inset:0 0 auto 0; z-index:50;
+    padding:1.1rem var(--edge);
+    transition:background .5s ease, padding .5s ease, border-color .5s ease;
+    border-bottom:1px solid transparent;
+  }
+  .hdr-inner{ max-width:var(--maxw); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; }
+  header.scrolled{ background:rgba(246,242,233,.82); backdrop-filter:blur(12px); border-bottom-color:var(--line); padding-block:.75rem; }
+  .brand{ font-family:var(--lat); font-size:1.2rem; letter-spacing:.2em; color:var(--head); }
+  .brand b{ font-weight:600; color:var(--gold-hi); font-style:italic; }
+  .brand .jp{ font-family:var(--serif); font-size:.7rem; letter-spacing:.32em; color:var(--muted); margin-left:.6em; }
+  .back{ font-size:.78rem; letter-spacing:.1em; color:var(--muted); font-family:var(--sans); display:inline-flex; align-items:center; gap:.5rem; transition:color .3s; }
+  .back::before{ content:"←"; }
+  .back:hover{ color:var(--head); }
+
+  /* ---------- ヒーロー ---------- */
+  .hero{ padding:9rem 0 4rem; position:relative; overflow:hidden; }
+  .hero-inner{ position:relative; z-index:2; }
+  .leaf{ position:absolute; z-index:0; opacity:.5; pointer-events:none; }
+  .leaf.a{ top:5rem; right:-1rem; width:150px; color:var(--amber); transform:rotate(12deg); }
+  .leaf.b{ bottom:-1rem; left:-1.5rem; width:120px; color:var(--leaf); transform:rotate(-18deg); opacity:.4; }
+  .hero .kicker{ font-family:var(--lat); font-style:italic; font-size:1rem; letter-spacing:.22em; color:var(--amber-hi); margin-bottom:1.2rem; }
+  .hero h1{
+    font-family:var(--serif); font-weight:600; color:var(--head);
+    font-size:clamp(2.3rem, 7.5vw, 4.6rem); line-height:1.24; letter-spacing:.04em;
+  }
+  .hero h1 .season{ color:var(--amber-hi); }
+  .date-row{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.6rem 1.4rem; margin-top:2rem; }
+  .date-chip{ font-family:var(--lat); font-size:clamp(1.8rem,5vw,2.8rem); color:var(--head); letter-spacing:.02em; display:inline-flex; align-items:baseline; gap:.4rem; }
+  .date-chip .dow{ font-family:var(--sans); font-size:.7rem; letter-spacing:.2em; color:var(--amber-hi); transform:translateY(-.4em); }
+  .date-sep{ width:1px; height:2.2rem; background:var(--line); align-self:center; }
+  .time{ margin-top:1rem; font-family:var(--sans); font-size:1rem; letter-spacing:.14em; color:var(--text); }
+  .time b{ font-weight:500; color:var(--amber-hi); }
+  .hero .place{ margin-top:1.6rem; color:var(--muted); font-size:.92rem; line-height:1.9; }
+
+  /* ---------- 概要テーブル ---------- */
+  .outline{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .card{ border:1px solid var(--line); border-radius:8px; background:linear-gradient(180deg,var(--panel),var(--paper-2)); padding:clamp(1.8rem,4vw,3rem); box-shadow:0 26px 60px -44px rgba(60,50,30,.5); }
+  .info-table dl{ display:grid; grid-template-columns:8em 1fr; gap:1.3rem 1rem; }
+  .info-table dt{ color:var(--amber-hi); font-size:.8rem; letter-spacing:.14em; padding-top:.25em; font-weight:500; }
+  .info-table dd{ color:var(--head); font-size:1rem; line-height:1.85; }
+  .info-table dd small{ display:block; color:var(--muted); font-size:.82rem; margin-top:.2rem; }
+
+  /* ---------- イベント内容 ---------- */
+  .contents{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2.5vw,1.6rem); }
+  .ev{ border:1px solid var(--line); border-radius:12px; background:var(--paper-2); padding:2rem 1.7rem; transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s; }
+  .ev:hover{ transform:translateY(-4px); border-color:var(--amber); box-shadow:0 22px 46px -30px rgba(60,50,30,.4); }
+  .ev-ico{ width:38px; height:38px; color:var(--amber-hi); margin-bottom:1rem; }
+  .ev-label{ font-family:var(--lat); font-style:italic; font-size:.9rem; letter-spacing:.1em; color:var(--amber-hi); }
+  .ev-name{ font-family:var(--serif); font-size:1.25rem; color:var(--head); letter-spacing:.03em; margin:.3rem 0 .8rem; }
+  .ev-desc{ color:var(--text); font-size:.9rem; line-height:1.95; }
+  .ev-desc span{ display:block; color:var(--muted); font-size:.82rem; }
+
+  /* ---------- 出展（小島由美） ---------- */
+  .booth{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .booth-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
+  .booth-copy p{ margin-top:1.3rem; font-size:1rem; line-height:2.15; color:var(--text); }
+  .booth-copy p.big{ font-family:var(--serif); font-size:clamp(1.3rem,3vw,1.8rem); line-height:1.7; color:var(--head); margin-top:0; }
+  .booth-copy .accent{ color:var(--amber-hi); }
+  .booth-fig{ border-radius:6px; overflow:hidden; position:relative; aspect-ratio:4/3; background:#efe9dc; box-shadow:0 30px 60px -36px rgba(60,50,30,.55), inset 0 0 0 1px var(--line); }
+  .booth-fig img{ width:100%; height:100%; object-fit:cover; }
+  .booth-fig::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,18,14,.35), transparent 55%); }
+  .booth-fig .tag{ position:absolute; left:1.1rem; bottom:1rem; z-index:2; font-family:var(--lat); font-style:italic; font-size:.82rem; color:#f2ecdd; letter-spacing:.08em; }
+
+  /* ---------- アクセス ---------- */
+  .access{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .access-addr{ margin-top:-1rem; margin-bottom:2rem; color:var(--head); font-size:1rem; letter-spacing:.06em; line-height:1.9; }
+  .access-addr small{ color:var(--muted); font-size:.84rem; letter-spacing:.04em; }
+  .map-panel{ border-radius:8px; overflow:hidden; position:relative; aspect-ratio:16/9; border:1px solid var(--line); background:var(--panel); }
+  .map-panel iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .map-link{ margin-top:1.1rem; text-align:right; font-family:var(--lat); font-style:italic; font-size:.92rem; }
+  .map-link a{ color:var(--amber-hi); transition:color .3s; }
+  .map-link a:hover{ color:var(--head); }
+
+  /* ---------- お申し込み ---------- */
+  .apply{ padding-block:clamp(3rem,8vw,5rem); }
+  .apply-card{ position:relative; border:1px solid var(--line); border-radius:10px; text-align:center;
+    background:linear-gradient(180deg,var(--panel),var(--paper-2));
+    padding:clamp(2.4rem,5.5vw,3.8rem); box-shadow:0 30px 66px -44px rgba(60,50,30,.5); }
+  .apply-card .eyebrow{ margin-bottom:.8rem; }
+  .a-lead{ font-family:var(--serif); font-size:clamp(1.4rem,3.4vw,2rem); line-height:1.55; letter-spacing:.05em; color:var(--head); }
+  .a-sub{ color:var(--muted); margin-top:1rem; font-size:.92rem; line-height:1.9; }
+  .apply-btn{ display:inline-flex; align-items:center; gap:.7rem; margin-top:1.9rem;
+    background:var(--amber); color:#fff; font-size:1.02rem; letter-spacing:.06em;
+    padding:1.05rem 2.6rem; border-radius:3px; box-shadow:0 16px 30px -16px rgba(189,122,52,.7);
+    transition:background .3s, transform .3s, box-shadow .3s; }
+  .apply-btn:hover{ background:var(--amber-hi); transform:translateY(-2px); box-shadow:0 20px 38px -16px rgba(161,95,39,.7); }
+  .apply-btn svg{ width:20px; height:20px; }
+  .apply-note{ margin-top:1.1rem; font-size:.76rem; letter-spacing:.06em; color:var(--muted); }
+
+  /* ---------- お問い合わせ ---------- */
+  .contact{ padding-block:clamp(4rem,11vw,7rem); text-align:center; position:relative; }
+  .contact::before{ content:""; position:absolute; inset:0; z-index:0; background:radial-gradient(50% 90% at 50% 40%, rgba(189,122,52,.12), transparent 65%); }
+  .contact > *{ position:relative; z-index:1; }
+  .contact .r-lead{ font-family:var(--serif); font-size:clamp(1.4rem,3.6vw,2.1rem); line-height:1.6; letter-spacing:.05em; color:var(--head); }
+  .contact .host{ margin-top:1.4rem; font-family:var(--sans); font-size:1.05rem; letter-spacing:.14em; color:var(--head); }
+  .contact .host span{ display:block; font-size:.7rem; letter-spacing:.28em; color:var(--muted); margin-bottom:.4rem; }
+  .contact .mail{ display:inline-block; margin-top:1.8rem; padding:1rem 2.2rem; background:var(--amber); color:#fff; border-radius:2px; letter-spacing:.04em; font-size:1rem; transition:background .3s, transform .3s; }
+  .contact .mail:hover{ background:var(--amber-hi); transform:translateY(-2px); }
+
+  /* ---------- フッター ---------- */
+  footer{ padding:3.5rem var(--edge) 2.5rem; border-top:1px solid var(--line); position:relative; z-index:2; text-align:center; }
+  .foot-back{ font-family:var(--lat); font-style:italic; font-size:1rem; color:var(--head); display:inline-flex; align-items:center; gap:.5rem; transition:color .3s; }
+  .foot-back::before{ content:"←"; }
+  .foot-back:hover{ color:var(--amber-hi); }
+  .foot-copy{ margin-top:2rem; font-size:.72rem; letter-spacing:.12em; color:var(--muted); }
+
+  /* ---------- 演出 ---------- */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (max-width:820px){
+    .cards{ grid-template-columns:1fr; }
+    .booth-grid{ grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none!important; scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+  :focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a class="brand" href="../index.html">Kojima <b>Yumi</b><span class="jp">小島由美</span></a>
+    <a class="back" href="../index.html">サイトへ戻る</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top">
+  <svg class="leaf a" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 4c6 20 20 26 40 28-18 6-26 18-30 40-4-22-14-30-32-34 16-4 20-16 22-34z"/></svg>
+  <svg class="leaf b" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 6C40 26 24 30 10 34c16 8 22 22 26 48 6-24 16-36 40-40-18-6-24-16-26-36z"/></svg>
+  <div class="hero-inner reveal">
+    <p class="kicker">Autumn Handmade Marché</p>
+    <h1><span class="season">秋の</span>ハンドメイド<br>マルシェ</h1>
+    <div class="date-row">
+      <span class="date-chip">10.11<span class="dow">SUN</span></span>
+      <span class="date-sep" aria-hidden="true"></span>
+      <span class="date-chip">11.22<span class="dow">SUN</span></span>
+    </div>
+    <p class="time">開催時間 <b>10:00 – 14:00</b>　｜　2026年</p>
+    <p class="place">会場：葛西用水ウッドデッキ（越谷市役所東側の藤棚通り沿い）</p>
+  </div>
+</section>
+
+<!-- ============ 開催概要 ============ -->
+<section class="outline wrap">
+  <div class="card reveal info-table">
+    <dl>
+      <dt>開催日</dt><dd>2026年10月11日（日）・11月22日（日）<small>雨天の場合は中止となることがあります</small></dd>
+      <dt>時間</dt><dd>10:00 – 14:00</dd>
+      <dt>会場</dt><dd>葛西用水ウッドデッキ<small>〒343-8501 埼玉県越谷市越ヶ谷四丁目2番1号（越谷市役所 東側の藤棚通り沿い）</small></dd>
+      <dt>入場</dt><dd>入場無料・出入り自由</dd>
+      <dt>主催</dt><dd>ケ・セラ・セラ</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ イベント内容 ============ -->
+<section class="contents wrap">
+  <div class="reveal">
+    <span class="eyebrow">Contents<span class="jp">イベント内容</span></span>
+    <h2 class="sec-title">当日は、こんなことが。</h2>
+  </div>
+  <div class="cards">
+    <div class="ev reveal">
+      <svg class="ev-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16l-1.2 11a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8L4 8Z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></svg>
+      <p class="ev-label">Shop</p>
+      <h3 class="ev-name">販売</h3>
+      <p class="ev-desc">ガラス製品<span>クラフト品・雑貨</span></p>
+    </div>
+    <div class="ev reveal">
+      <svg class="ev-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 12.5c1.6-1.4 3-1.4 4.4 0M12 3.8c2.2 2.6 2.2 5.4 0 8.2M9 21c-2.4 0-4.2-1.8-4.2-4.4 0-2 1-3.3 1-3.3"/><path d="M15.5 21c2.4 0 4.2-1.8 4.2-4.4 0-2-1-3.3-1-3.3"/></svg>
+      <p class="ev-label">Experience</p>
+      <h3 class="ev-name">体験</h3>
+      <p class="ev-desc">ハンドマッサージ<span>手もとを、ゆっくりほぐす時間</span></p>
+    </div>
+    <div class="ev reveal">
+      <svg class="ev-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.4"/><circle cx="16.5" cy="16" r="2.4"/></svg>
+      <p class="ev-label">Stage</p>
+      <h3 class="ev-name">ステージ</h3>
+      <p class="ev-desc">オカリナ演奏<span>やさしい音色を、青空の下で</span></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ アクセス ============ -->
+<section class="access wrap">
+  <div class="reveal">
+    <span class="eyebrow">Access<span class="jp">会場アクセス</span></span>
+    <h2 class="sec-title">葛西用水ウッドデッキ</h2>
+    <p class="access-addr">〒343-8501　埼玉県越谷市越ヶ谷四丁目2番1号<br><small>越谷市役所 東側の藤棚通り沿い</small></p>
+  </div>
+  <div class="map-panel reveal">
+    <iframe title="会場地図（埼玉県越谷市越ヶ谷四丁目2番1号）" loading="lazy" src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E8%B6%8A%E3%83%B6%E8%B0%B7%E5%9B%9B%E4%B8%81%E7%9B%AE2%E7%95%AA1%E5%8F%B7&z=17&output=embed"></iframe>
+  </div>
+  <p class="map-link reveal"><a href="https://www.google.com/maps/search/?api=1&query=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E8%B6%8A%E3%83%B6%E8%B0%B7%E5%9B%9B%E4%B8%81%E7%9B%AE2%E7%95%AA1%E5%8F%B7" target="_blank" rel="noopener">Googleマップで開く →</a></p>
+</section>
+
+<!-- ============ お申し込み ============ -->
+<section class="apply wrap" id="apply">
+  <div class="apply-card reveal">
+    <span class="eyebrow">Application<span class="jp">お申し込み</span></span>
+    <p class="a-lead">体験・ワークショップのお申し込み</p>
+    <p class="a-sub">下記のフォームより、必要事項をご記入のうえお申し込みください。<br>折り返しご連絡いたします。</p>
+    <!-- ▼ ★GoogleフォームのURL（forms.gle/… または docs.google.com/forms/…）に差し替えてください -->
+    <a class="apply-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeJN-kEIFp8LQLiXu_Udz-KVc2WMK2lSqUnyexLpl_B1q0m0g/viewform?usp=header" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+      申し込みフォームへ
+    </a>
+    <p class="apply-note">Googleフォームが開きます</p>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section class="contact wrap">
+  <p class="r-lead reveal">イベントについてのお問い合わせ</p>
+  <p class="host reveal"><span>主催・お問い合わせ先</span>ケ・セラ・セラ</p>
+  <a class="mail reveal" href="mailto:keserasera.koshigaya@gmail.com">keserasera.koshigaya@gmail.com</a>
+</section>
+
+<footer>
+  <a class="foot-back" href="../index.html">小島由美のサイトへ戻る</a>
+  <p class="foot-copy">© 2026 秋のハンドメイドマルシェ — This is a demo page.</p>
+</footer>
+
+<script>
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.14 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

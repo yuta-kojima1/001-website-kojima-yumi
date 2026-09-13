@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Ensamble 展示・販売 ｜ 小島由美</title>
+<meta name="description" content="Glass Ensamble 展示・販売。2026年11月13日(金)〜15日(日) 9:00–18:00、CAFE803（越谷市越ヶ谷）にて。ステンドグラス・グラスリッツェン・江戸切子・ガラスフュージング。小島由美(Yumi)も出展します。">
+<meta name="theme-color" content="#f6f2e9">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="小島由美 グラスリッツェン教室・金継ぎ教室">
+<meta property="og:title" content="Glass Ensamble 展示・販売 ｜ 小島由美">
+<meta property="og:description" content="2026.11.13 FRI – 11.15 SUN｜9:00–18:00｜CAFE803（越谷市越ヶ谷）。ガラス作家4組による展示・販売。">
+<meta property="og:url" content="https://example.com/lp2/">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:    #f5f4f2;   /* 冬のやわらかな白 */
+    --paper-2:  #eef1f2;
+    --panel:    #e7ecef;
+
+    --ink:      #232a2e;
+    --head:     #262d31;
+    --text:     #3f474b;
+    --muted:    #838d92;
+    --line:     rgba(36,42,46,.14);
+
+    /* 冬の展示会トーン（深い緑＋silver＋差し色の赤） */
+    --pine:     #4d6b5a;   /* 深いモミの緑 */
+    --pine-hi:  #3a5445;
+    --silver:   #7d8b93;
+    --berry:    #b0413f;   /* 柊の実の赤（アクセント少量） */
+    --gold:     #b18a3c;
+
+    --serif: "Shippori Mincho", "Cormorant Garamond", serif;
+    --lat:   "Cormorant Garamond", "Shippori Mincho", serif;
+    --sans:  "Zen Kaku Gothic New", system-ui, sans-serif;
+
+    --edge: clamp(24px, 5vw, 60px);
+    --maxw: 1080px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.9;
+    letter-spacing:.02em;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(120% 80% at 84% -6%, rgba(77,107,90,.10), transparent 55%),
+      radial-gradient(90% 60% at 6% 106%, rgba(125,139,147,.10), transparent 60%);
+    background-attachment:fixed;
+  }
+  ::selection{ background:var(--pine); color:#fff; }
+  a{ color:inherit; text-decoration:none; }
+  img{ display:block; max-width:100%; }
+
+  body::before{
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
+    opacity:.04; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--edge); }
+  section{ position:relative; z-index:2; }
+  .eyebrow{ font-family:var(--lat); font-style:italic; font-size:1rem; color:var(--pine-hi); letter-spacing:.14em; display:inline-block; margin-bottom:1rem; }
+  .eyebrow .jp{ font-family:var(--sans); font-style:normal; font-size:.7rem; letter-spacing:.4em; color:var(--muted); margin-left:1em; vertical-align:.15em; }
+  h2.sec-title{ font-family:var(--serif); font-weight:500; line-height:1.4; font-size:clamp(1.6rem, 4vw, 2.5rem); letter-spacing:.04em; margin-bottom:2.2rem; color:var(--head); }
+
+  /* ---------- ヘッダー ---------- */
+  header{ position:fixed; inset:0 0 auto 0; z-index:50; padding:1.1rem var(--edge); transition:background .5s ease, padding .5s ease, border-color .5s ease; border-bottom:1px solid transparent; }
+  .hdr-inner{ max-width:var(--maxw); margin-inline:auto; display:flex; align-items:center; justify-content:space-between; }
+  header.scrolled{ background:rgba(245,244,242,.82); backdrop-filter:blur(12px); border-bottom-color:var(--line); padding-block:.75rem; }
+  .brand{ font-family:var(--lat); font-size:1.2rem; letter-spacing:.2em; color:var(--head); }
+  .brand b{ font-weight:600; color:var(--pine-hi); font-style:italic; }
+  .brand .jp{ font-family:var(--serif); font-size:.7rem; letter-spacing:.32em; color:var(--muted); margin-left:.6em; }
+  .back{ font-size:.78rem; letter-spacing:.1em; color:var(--muted); font-family:var(--sans); display:inline-flex; align-items:center; gap:.5rem; transition:color .3s; }
+  .back::before{ content:"←"; }
+  .back:hover{ color:var(--head); }
+
+  /* ---------- ヒーロー ---------- */
+  .hero{ padding:9rem 0 4rem; position:relative; overflow:hidden; }
+  .hero-inner{ position:relative; z-index:2; }
+  .flake{ position:absolute; z-index:0; color:var(--silver); opacity:.4; pointer-events:none; }
+  .flake.a{ top:6rem; right:0; width:120px; }
+  .flake.b{ bottom:1rem; left:-1rem; width:90px; opacity:.3; color:var(--pine); }
+  .hero .kicker{ font-family:var(--lat); font-style:italic; font-size:1rem; letter-spacing:.22em; color:var(--pine-hi); margin-bottom:1.2rem; }
+  .hero h1{ font-family:var(--serif); font-weight:600; color:var(--head); font-size:clamp(2.4rem, 8vw, 4.8rem); line-height:1.16; letter-spacing:.03em; }
+  .hero h1 .en{ font-family:var(--lat); font-style:italic; font-weight:600; color:var(--pine-hi); display:block; font-size:clamp(2.6rem,9vw,5.4rem); letter-spacing:.02em; }
+  .hero .genre{ margin-top:1.5rem; font-family:var(--sans); font-size:clamp(.9rem,2vw,1.05rem); letter-spacing:.1em; color:var(--silver); }
+  .date-row{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.6rem 1.2rem; margin-top:2rem; }
+  .date-chip{ font-family:var(--lat); font-size:clamp(1.6rem,4.6vw,2.6rem); color:var(--head); letter-spacing:.02em; display:inline-flex; align-items:baseline; gap:.4rem; }
+  .date-chip .dow{ font-family:var(--sans); font-size:.68rem; letter-spacing:.2em; color:var(--pine-hi); transform:translateY(-.4em); }
+  .date-arrow{ color:var(--silver); font-family:var(--lat); align-self:center; }
+  .time{ margin-top:1rem; font-family:var(--sans); font-size:1rem; letter-spacing:.14em; color:var(--text); }
+  .time b{ font-weight:500; color:var(--pine-hi); }
+  .hero .place{ margin-top:1.6rem; color:var(--muted); font-size:.92rem; line-height:1.9; }
+
+  /* ---------- 概要テーブル ---------- */
+  .outline{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .card{ border:1px solid var(--line); border-radius:8px; background:linear-gradient(180deg,var(--panel),var(--paper-2)); padding:clamp(1.8rem,4vw,3rem); box-shadow:0 26px 60px -44px rgba(30,40,45,.4); }
+  .info-table dl{ display:grid; grid-template-columns:8em 1fr; gap:1.3rem 1rem; }
+  .info-table dt{ color:var(--pine-hi); font-size:.8rem; letter-spacing:.14em; padding-top:.25em; font-weight:500; }
+  .info-table dd{ color:var(--head); font-size:1rem; line-height:1.85; }
+  .info-table dd small{ display:block; color:var(--muted); font-size:.82rem; margin-top:.2rem; }
+
+  /* ---------- 展示ジャンル ---------- */
+  .genres{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .genre-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.9rem,2vw,1.4rem); }
+  .g-item{ border:1px solid var(--line); border-radius:12px; background:var(--paper-2); padding:1.7rem 1.4rem; text-align:center; transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s; }
+  .g-item:hover{ transform:translateY(-4px); border-color:var(--pine); box-shadow:0 22px 46px -30px rgba(30,40,45,.35); }
+  .g-en{ font-family:var(--lat); font-style:italic; font-size:.85rem; letter-spacing:.08em; color:var(--pine-hi); }
+  .g-jp{ font-family:var(--serif); font-size:1.08rem; color:var(--head); letter-spacing:.04em; margin-top:.4rem; }
+
+  /* ---------- 出展作家 ---------- */
+  .makers{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .maker-list{ display:flex; flex-wrap:wrap; gap:.8rem 1rem; }
+  .maker{ font-family:var(--lat); font-size:1.15rem; letter-spacing:.04em; color:var(--head); border:1px solid var(--line); border-radius:40px; padding:.55rem 1.4rem; background:var(--paper-2); }
+  .maker.me{ background:var(--pine); color:#fff; border-color:var(--pine); }
+  .maker.me small{ font-family:var(--sans); font-size:.66rem; letter-spacing:.16em; opacity:.85; margin-left:.5em; }
+
+  /* ---------- 出展（小島由美） ---------- */
+  .booth{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .booth-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
+  .booth-copy p{ margin-top:1.3rem; font-size:1rem; line-height:2.15; color:var(--text); }
+  .booth-copy p.big{ font-family:var(--serif); font-size:clamp(1.3rem,3vw,1.8rem); line-height:1.7; color:var(--head); margin-top:0; }
+  .booth-copy .accent{ color:var(--pine-hi); }
+  .booth-fig{ border-radius:6px; overflow:hidden; position:relative; aspect-ratio:4/3; background:#dfe4e6; box-shadow:0 30px 60px -36px rgba(30,40,45,.5), inset 0 0 0 1px var(--line); }
+  .booth-fig img{ width:100%; height:100%; object-fit:cover; }
+  .booth-fig::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(18,24,26,.35), transparent 55%); }
+  .booth-fig .tag{ position:absolute; left:1.1rem; bottom:1rem; z-index:2; font-family:var(--lat); font-style:italic; font-size:.82rem; color:#eef3f2; letter-spacing:.08em; }
+
+  /* ---------- アクセス ---------- */
+  .access{ padding-block:clamp(3.5rem,9vw,6rem); }
+  .access-addr{ margin-top:-1rem; margin-bottom:2rem; color:var(--head); font-size:1rem; letter-spacing:.06em; line-height:1.9; }
+  .access-addr small{ color:var(--muted); font-size:.84rem; letter-spacing:.04em; }
+  .map-panel{ border-radius:8px; overflow:hidden; position:relative; aspect-ratio:16/9; border:1px solid var(--line); background:var(--panel); }
+  .map-panel iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .map-link{ margin-top:1.1rem; text-align:right; font-family:var(--lat); font-style:italic; font-size:.92rem; }
+  .map-link a{ color:var(--pine-hi); transition:color .3s; }
+  .map-link a:hover{ color:var(--head); }
+
+  /* ---------- お申し込み ---------- */
+  .apply{ padding-block:clamp(3rem,8vw,5rem); }
+  .apply-card{ position:relative; border:1px solid var(--line); border-radius:10px; text-align:center;
+    background:linear-gradient(180deg,var(--panel),var(--paper-2));
+    padding:clamp(2.4rem,5.5vw,3.8rem); box-shadow:0 30px 66px -44px rgba(30,40,45,.4); }
+  .apply-card .eyebrow{ margin-bottom:.8rem; }
+  .a-lead{ font-family:var(--serif); font-size:clamp(1.4rem,3.4vw,2rem); line-height:1.55; letter-spacing:.05em; color:var(--head); }
+  .a-sub{ color:var(--muted); margin-top:1rem; font-size:.92rem; line-height:1.9; }
+  .apply-btn{ display:inline-flex; align-items:center; gap:.7rem; margin-top:1.9rem;
+    background:var(--pine); color:#fff; font-size:1.02rem; letter-spacing:.06em;
+    padding:1.05rem 2.6rem; border-radius:3px; box-shadow:0 16px 30px -16px rgba(77,107,90,.7);
+    transition:background .3s, transform .3s, box-shadow .3s; }
+  .apply-btn:hover{ background:var(--pine-hi); transform:translateY(-2px); box-shadow:0 20px 38px -16px rgba(58,84,69,.7); }
+  .apply-btn svg{ width:20px; height:20px; }
+  .apply-note{ margin-top:1.1rem; font-size:.76rem; letter-spacing:.06em; color:var(--muted); }
+
+  /* ---------- お問い合わせ ---------- */
+  .contact{ padding-block:clamp(4rem,11vw,7rem); text-align:center; position:relative; }
+  .contact::before{ content:""; position:absolute; inset:0; z-index:0; background:radial-gradient(50% 90% at 50% 40%, rgba(77,107,90,.12), transparent 65%); }
+  .contact > *{ position:relative; z-index:1; }
+  .contact .r-lead{ font-family:var(--serif); font-size:clamp(1.4rem,3.6vw,2.1rem); line-height:1.6; letter-spacing:.05em; color:var(--head); }
+  .contact .host{ margin-top:1.4rem; font-family:var(--sans); font-size:1.05rem; letter-spacing:.14em; color:var(--head); }
+  .contact .host span{ display:block; font-size:.7rem; letter-spacing:.28em; color:var(--muted); margin-bottom:.4rem; }
+  .contact .mail{ display:inline-block; margin-top:1.8rem; padding:1rem 2.2rem; background:var(--pine); color:#fff; border-radius:2px; letter-spacing:.04em; font-size:1rem; transition:background .3s, transform .3s; }
+  .contact .mail:hover{ background:var(--pine-hi); transform:translateY(-2px); }
+
+  /* ---------- フッター ---------- */
+  footer{ padding:3.5rem var(--edge) 2.5rem; border-top:1px solid var(--line); position:relative; z-index:2; text-align:center; }
+  .foot-back{ font-family:var(--lat); font-style:italic; font-size:1rem; color:var(--head); display:inline-flex; align-items:center; gap:.5rem; transition:color .3s; }
+  .foot-back::before{ content:"←"; }
+  .foot-back:hover{ color:var(--pine-hi); }
+  .foot-copy{ margin-top:2rem; font-size:.72rem; letter-spacing:.12em; color:var(--muted); }
+
+  /* ---------- 演出 ---------- */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (max-width:820px){
+    .genre-grid{ grid-template-columns:1fr 1fr; }
+    .booth-grid{ grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none!important; scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+  :focus-visible{ outline:2px solid var(--pine); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a class="brand" href="../index.html">Kojima <b>Yumi</b><span class="jp">小島由美</span></a>
+    <a class="back" href="../index.html">サイトへ戻る</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="top">
+  <svg class="flake a" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M50 6v88M6 50h88M20 20l60 60M80 20 20 80M50 6l-9 12M50 6l9 12M50 94l-9-12M50 94l9-12M6 50l12-9M6 50l12 9M94 50l-12-9M94 50l-12 9"/></svg>
+  <svg class="flake b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M50 6v88M6 50h88M20 20l60 60M80 20 20 80"/></svg>
+  <div class="hero-inner reveal">
+    <p class="kicker">Glass Exhibition &amp; Sale</p>
+    <h1><span class="en">Glass Ensamble</span>展示・販売</h1>
+    <p class="genre">ステンドグラス ／ グラスリッツェン ／ 江戸切子 ／ ガラスフュージング</p>
+    <div class="date-row">
+      <span class="date-chip">11.13<span class="dow">FRI</span></span>
+      <span class="date-arrow" aria-hidden="true">—</span>
+      <span class="date-chip">11.15<span class="dow">SUN</span></span>
+    </div>
+    <p class="time">開催時間 <b>9:00 – 18:00</b>　｜　2026年</p>
+    <p class="place">会場：CAFE803（〒343-0813 埼玉県越谷市越ヶ谷3-3-16）</p>
+  </div>
+</section>
+
+<!-- ============ 開催概要 ============ -->
+<section class="outline wrap">
+  <div class="card reveal info-table">
+    <dl>
+      <dt>会期</dt><dd>2026年11月13日（金）〜 11月15日（日）<small>3日間</small></dd>
+      <dt>時間</dt><dd>9:00 – 18:00</dd>
+      <dt>会場</dt><dd>CAFE803<small>〒343-0813 埼玉県越谷市越ヶ谷3-3-16</small></dd>
+      <dt>内容</dt><dd>ガラス作品の展示・販売</dd>
+      <dt>入場</dt><dd>入場無料</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ 展示ジャンル ============ -->
+<section class="genres wrap">
+  <div class="reveal">
+    <span class="eyebrow">Works<span class="jp">展示ジャンル</span></span>
+    <h2 class="sec-title">四つのガラス技法が、ひとつの場所に。</h2>
+  </div>
+  <div class="genre-grid">
+    <div class="g-item reveal"><p class="g-en">Stained Glass</p><p class="g-jp">ステンドグラス</p></div>
+    <div class="g-item reveal"><p class="g-en">Glasritzen</p><p class="g-jp">グラスリッツェン</p></div>
+    <div class="g-item reveal"><p class="g-en">Edo Kiriko</p><p class="g-jp">江戸切子</p></div>
+    <div class="g-item reveal"><p class="g-en">Fusing</p><p class="g-jp">ガラスフュージング</p></div>
+  </div>
+</section>
+
+<!-- ============ 出展作家 ============ -->
+<section class="makers wrap">
+  <div class="reveal">
+    <span class="eyebrow">Makers<span class="jp">出展作家</span></span>
+    <h2 class="sec-title">出展メンバー</h2>
+  </div>
+  <div class="maker-list reveal">
+    <span class="maker">Kumi</span>
+    <span class="maker">Yumi</span>
+    <span class="maker">IROHA</span>
+    <span class="maker">Sakunon</span>
+    <span class="maker">Atelier Gure &amp; Milu</span>
+  </div>
+</section>
+
+<!-- ============ アクセス ============ -->
+<section class="access wrap">
+  <div class="reveal">
+    <span class="eyebrow">Access<span class="jp">会場アクセス</span></span>
+    <h2 class="sec-title">CAFE803</h2>
+    <p class="access-addr">〒343-0813　埼玉県越谷市越ヶ谷3-3-16</p>
+  </div>
+  <div class="map-panel reveal">
+    <iframe title="会場地図（CAFE803／埼玉県越谷市越ヶ谷3-3-16）" loading="lazy" src="https://maps.google.com/maps?q=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E8%B6%8A%E3%83%B6%E8%B0%B73-3-16&z=17&output=embed"></iframe>
+  </div>
+  <p class="map-link reveal"><a href="https://www.google.com/maps/search/?api=1&query=%E5%9F%BC%E7%8E%89%E7%9C%8C%E8%B6%8A%E8%B0%B7%E5%B8%82%E8%B6%8A%E3%83%B6%E8%B0%B73-3-16" target="_blank" rel="noopener">Googleマップで開く →</a></p>
+</section>
+
+<!-- ============ お申し込み ============ -->
+<section class="apply wrap" id="apply">
+  <div class="apply-card reveal">
+    <span class="eyebrow">Application<span class="jp">お申し込み</span></span>
+    <p class="a-lead">ワークショップ・体験のお申し込み</p>
+    <p class="a-sub">下記のフォームより、必要事項をご記入のうえお申し込みください。<br>折り返しご連絡いたします。</p>
+    <!-- ▼ ★GoogleフォームのURL（forms.gle/… または docs.google.com/forms/…）に差し替えてください -->
+    <a class="apply-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSciILgF11QxQWEWml9WiB5axONK26Qwgdbc0xQeT37o1-KmRg/viewform?usp=header" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+      申し込みフォームへ
+    </a>
+    <p class="apply-note">Googleフォームが開きます</p>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section class="contact wrap">
+  <p class="r-lead reveal">展示についてのお問い合わせ</p>
+  <p class="host reveal"><span>お問い合わせ先</span>Glass Ensamble</p>
+  <a class="mail reveal" href="mailto:glass.ensemble202311@gmail.com">glass.ensemble202311@gmail.com</a>
+</section>
+
+<footer>
+  <a class="foot-back" href="../index.html">小島由美のサイトへ戻る</a>
+  <p class="foot-copy">© 2026 Glass Ensamble — This is a demo page.</p>
+</footer>
+
+<script>
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.14 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

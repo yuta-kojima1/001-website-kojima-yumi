@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小島由美 ｜ グラスリッツェン教室・金継ぎ教室</title>
+<meta name="description" content="ガラスに彫る光、うつわに継ぐ金。グラスリッツェン講師・小島由美による、グラスリッツェン教室と金継ぎ教室のご案内。">
+<meta name="theme-color" content="#f6f2e9">
+
+<!-- ▼ OGP / SNS共有時のサムネイル・タイトル（★デプロイ後、URLを実URLに置き換えてください） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="小島由美 グラスリッツェン教室・金継ぎ教室">
+<meta property="og:title" content="小島由美 ｜ グラスリッツェン教室・金継ぎ教室">
+<meta property="og:description" content="ガラスに彫る光、うつわに継ぐ金。ひとつひとつ手のなかで。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/images/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="小島由美 ｜ グラスリッツェン教室・金継ぎ教室">
+<meta name="twitter:image" content="https://example.com/images/ogp.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* --- 生成りの和紙に、ガラスの光と金彩 --- */
+    --paper:    #f6f2e9;   /* 背景（やわらかな生成り） */
+    --paper-2:  #f1ecdf;
+    --panel:    #ece5d6;   /* 面・カード */
+    --panel-hi: #e5ddcb;
+
+    --ink:      #2a251d;   /* いちばん濃い墨 */
+    --head:     #2c271f;   /* 見出し */
+    --text:     #453f34;   /* 本文 */
+    --muted:    #8c8472;   /* 補助文字 */
+    --line:     rgba(42,37,29,.14);
+
+    --gold:     #b18a3c;   /* 金彩・金継ぎの金（ボタン地） */
+    --gold-hi:  #977322;   /* 濃い金（明地の見出し・強調） */
+    --slate:    #566270;   /* ガラスの銀白＝明地では落ち着いた青灰 */
+    --cap:      #f2ecdd;   /* 濃い写真の上に置くキャプション色 */
+
+    --serif: "Shippori Mincho", "Cormorant Garamond", serif;
+    --lat:   "Cormorant Garamond", "Shippori Mincho", serif;
+    --sans:  "Zen Kaku Gothic New", system-ui, sans-serif;
+
+    --edge: clamp(24px, 5vw, 60px);
+    --maxw: 1240px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.9;
+    letter-spacing:.02em;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(120% 80% at 82% -8%, rgba(177,138,60,.10), transparent 55%),
+      radial-gradient(90% 60% at 6% 108%, rgba(86,98,112,.07), transparent 60%);
+    background-attachment:fixed;
+  }
+  ::selection{ background:var(--gold); color:#fff; }
+  a{ color:inherit; text-decoration:none; }
+  img{ display:block; max-width:100%; }
+
+  /* かすかな紙の粒状感 */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
+    opacity:.045; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- 共通レイアウト ---------- */
+  .wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--edge); }
+  section{ position:relative; z-index:2; }
+  .eyebrow{
+    font-family:var(--lat); font-style:italic; font-size:1rem;
+    color:var(--gold-hi); letter-spacing:.14em; display:inline-block; margin-bottom:1rem;
+  }
+  .eyebrow .jp{
+    font-family:var(--sans); font-style:normal; font-size:.7rem; letter-spacing:.4em;
+    color:var(--muted); margin-left:1em; vertical-align:.15em;
+  }
+  h2.sec-title{
+    font-family:var(--serif); font-weight:500; line-height:1.35;
+    font-size:clamp(1.8rem, 4.4vw, 3rem); letter-spacing:.04em; margin-bottom:2.5rem; color:var(--head);
+  }
+
+  /* ---------- ヘッダー ---------- */
+  header{
+    position:fixed; inset:0 0 auto 0; z-index:50;
+    padding:1.1rem var(--edge);
+    transition:background .5s ease, padding .5s ease, border-color .5s ease;
+    border-bottom:1px solid transparent;
+  }
+  .hdr-inner{
+    max-width:var(--maxw); margin-inline:auto;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  header.scrolled{
+    background:rgba(246,242,233,.82); backdrop-filter:blur(12px);
+    border-bottom-color:var(--line); padding-block:.75rem;
+  }
+  .brand{ font-family:var(--lat); font-size:1.3rem; letter-spacing:.2em; color:var(--head); }
+  .brand b{ font-weight:600; color:var(--gold-hi); font-style:italic; }
+  .brand .jp{ font-family:var(--serif); font-size:.72rem; letter-spacing:.34em; color:var(--muted); margin-left:.7em; }
+  nav.desk{ display:flex; gap:1.9rem; align-items:center; }
+  nav.desk a{
+    font-size:.76rem; letter-spacing:.16em; color:var(--muted);
+    font-family:var(--sans); transition:color .3s;
+  }
+  nav.desk a:hover{ color:var(--head); }
+  .book-btn{
+    font-family:var(--sans); font-size:.76rem; letter-spacing:.12em; color:#fff!important;
+    background:var(--gold); padding:.62rem 1.3rem; border-radius:2px;
+    transition:background .3s, transform .3s;
+  }
+  .book-btn:hover{ background:var(--gold-hi); transform:translateY(-1px); }
+  .burger{ display:none; background:none; border:0; color:var(--head); cursor:pointer; padding:.4rem; }
+  .burger span{ display:block; width:26px; height:1.5px; background:var(--head); margin:5px 0; transition:.3s; }
+
+  /* ---------- ヒーロー ---------- */
+  .hero{
+    min-height:100svh; display:flex; flex-direction:column; justify-content:center;
+    padding:8rem 0 4rem; position:relative; overflow:hidden;
+  }
+  /* ヒーロー全面の写真（images/hero.jpg に、明るい自然光の写真を差し替え推奨） */
+  .hero::before{
+    content:""; position:absolute; inset:0; z-index:0;
+    background:var(--paper) url('images/hero.jpg') center right / cover no-repeat;
+  }
+  /* 写真の上に生成りのベールを重ね、左を明るく保って文字を読みやすく */
+  .hero::after{
+    content:""; position:absolute; inset:0; z-index:1;
+    background:
+      linear-gradient(90deg, rgba(246,242,233,.96) 0%, rgba(246,242,233,.84) 40%, rgba(246,242,233,.52) 72%, rgba(246,242,233,.7) 100%),
+      linear-gradient(0deg, rgba(246,242,233,.9) 0%, transparent 46%);
+  }
+  .hero-inner{ position:relative; z-index:2; width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--edge); }
+  .hero .kicker{
+    font-family:var(--lat); font-style:italic; font-size:.98rem; letter-spacing:.24em;
+    color:var(--gold-hi); margin-bottom:1.6rem; padding-left:.2em;
+  }
+  .hero .kicker .sep{ color:var(--muted); font-style:normal; margin:0 .5em; }
+  .wordmark{
+    font-family:var(--serif); font-weight:500; font-size:clamp(2.4rem, 7vw, 5rem);
+    line-height:1.28; letter-spacing:.04em; color:var(--head);
+  }
+  .wordmark .g{ color:var(--slate); }
+  .wordmark .k{ color:var(--gold-hi); }
+  .hero .sub{
+    font-family:var(--sans); font-size:clamp(1rem,2.2vw,1.2rem); font-weight:400;
+    letter-spacing:.14em; color:var(--slate); margin-top:1.8rem;
+  }
+  .hero .lead{
+    max-width:34ch; margin-top:1.3rem; color:var(--muted); font-size:.9rem; line-height:2.05; text-wrap:pretty;
+  }
+  .hero .signature{
+    margin-top:2.2rem; font-family:var(--lat); font-style:italic; font-size:1.05rem;
+    letter-spacing:.1em; color:var(--slate);
+  }
+  .hero .signature span{ font-family:var(--serif); font-style:normal; font-size:.78rem; letter-spacing:.3em; color:var(--muted); margin-right:.8em; }
+  .nb{ white-space:nowrap; }
+
+  /* ---------- コンセプト（共通） ---------- */
+  .concept{ padding-block:clamp(5rem,12vw,9rem); }
+  .concept-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,6vw,6rem); align-items:center; }
+  .concept.reverse .concept-grid{ direction:rtl; }
+  .concept.reverse .concept-grid > *{ direction:ltr; }
+  .concept-copy p{ color:var(--text); font-size:1rem; line-height:2.2; margin-top:1.4rem; }
+  .concept-copy p.big{
+    font-family:var(--serif); font-size:clamp(1.4rem,3.1vw,2.05rem); line-height:1.7;
+    letter-spacing:.04em; margin-top:0; color:var(--head);
+  }
+  .concept-copy .accent{ color:var(--gold-hi); }
+  .concept-copy .accent-s{ color:var(--slate); }
+
+  /* 作品パネル（写真） */
+  .art-panel{
+    aspect-ratio:4/5; border-radius:4px; position:relative; overflow:hidden;
+    background:#efe9dc center/cover no-repeat;
+    box-shadow:0 30px 60px -34px rgba(60,50,30,.5), inset 0 0 0 1px var(--line);
+  }
+  .art-panel img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .art-panel::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(20,18,14,.42), transparent 48%);
+  }
+  .art-panel .tag{
+    position:absolute; left:1.2rem; bottom:1.1rem; z-index:2; font-family:var(--lat); font-style:italic;
+    font-size:.85rem; color:var(--cap); letter-spacing:.1em;
+  }
+
+  /* ---------- ご案内（LP導線） ---------- */
+  .guide{ padding-block:clamp(5rem,12vw,8.5rem); position:relative; }
+  .guide::before{
+    content:""; position:absolute; top:0; bottom:0; left:50%; width:100vw; transform:translateX(-50%);
+    background:linear-gradient(180deg, transparent, rgba(177,138,60,.08), transparent); z-index:0;
+  }
+  .guide-head{ position:relative; z-index:1; text-align:center; margin-bottom:clamp(2.2rem,5vw,3.2rem); }
+  .guide-head .r-lead{ font-family:var(--serif); font-size:clamp(1.5rem,3.6vw,2.2rem); line-height:1.55; letter-spacing:.05em; color:var(--head); margin-top:.3rem; }
+  .guide-head .r-sub{ color:var(--muted); margin-top:1rem; font-size:.95rem; }
+  .guide-cards{ position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.4rem,3vw,2rem); }
+  .guide-card{
+    position:relative; border-radius:8px; overflow:hidden; min-height:360px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    border:1px solid var(--line); box-shadow:0 30px 66px -40px rgba(60,50,30,.5);
+    transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s;
+  }
+  .guide-card:hover{ transform:translateY(-4px); box-shadow:0 42px 82px -44px rgba(60,50,30,.6); }
+  .guide-card .gc-bg{ position:absolute; inset:0; z-index:0; background-size:cover; background-position:center top; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .guide-card:hover .gc-bg{ transform:scale(1.04); }
+  .guide-card::after{ content:""; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(to top, rgba(28,20,12,.94) 0%, rgba(28,20,12,.66) 32%, rgba(28,20,12,.12) 60%, transparent 78%); }
+  .gc-body{ position:relative; z-index:2; padding:1.8rem 1.7rem; }
+  .gc-eyebrow{ font-family:var(--lat); font-style:italic; font-size:.92rem; letter-spacing:.12em; color:#e8c98a; }
+  .gc-title{ font-family:var(--serif); font-weight:500; font-size:clamp(1.25rem,2.2vw,1.55rem); color:#fdf8ee; letter-spacing:.03em; margin:.35rem 0 .6rem; line-height:1.4; }
+  .gc-meta{ color:rgba(253,248,238,.82); font-size:.82rem; line-height:1.8; letter-spacing:.03em; }
+  .gc-more{ display:inline-flex; align-items:center; gap:.5rem; margin-top:1.3rem; background:var(--gold); color:#fff; font-size:.85rem; letter-spacing:.08em; padding:.7rem 1.5rem; border-radius:2px; transition:background .3s; }
+  .gc-more::after{ content:"→"; transition:transform .3s; }
+  .guide-card:hover .gc-more{ background:var(--gold-hi); }
+  .guide-card:hover .gc-more::after{ transform:translateX(4px); }
+
+  /* ---------- SNS（Instagramのみ） ---------- */
+  .sns-follow{ padding-block:clamp(4rem,10vw,7rem); }
+  .sns2{ display:grid; grid-template-columns:1fr; max-width:520px; }
+  .sns2-card{ display:flex; flex-direction:column; gap:.5rem; padding:2rem 2.1rem;
+    border:1px solid var(--line); border-radius:12px;
+    background:color-mix(in srgb, var(--gold) 8%, var(--paper));
+    transition:transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s, box-shadow .35s; }
+  .sns2-card:hover{ transform:translateY(-4px); border-color:var(--gold); box-shadow:0 22px 46px -30px rgba(60,50,30,.4); }
+  .sns2-ico{ width:34px; height:34px; margin-bottom:.4rem; color:var(--gold-hi); }
+  .sns2-name{ font-family:var(--sans); font-weight:500; font-size:1.05rem; letter-spacing:.03em; color:var(--head); }
+  .sns2-handle{ font-family:var(--lat); font-style:italic; font-size:1rem; letter-spacing:.04em; color:var(--gold-hi); }
+  .sns2-desc{ color:var(--muted); font-size:.85rem; line-height:1.85; }
+  .sns2-more{ margin-top:.5rem; font-family:var(--lat); font-style:italic; font-size:.95rem; color:var(--slate); display:inline-flex; align-items:center; gap:.45rem; }
+  .sns2-more::after{ content:"→"; transition:transform .3s; }
+  .sns2-card:hover .sns2-more::after{ transform:translateX(4px); }
+
+  /* ---------- お問い合わせ ---------- */
+  .contact{ padding-block:clamp(5rem,13vw,10rem); text-align:center; position:relative; }
+  .contact::before{
+    content:""; position:absolute; inset:0; z-index:0;
+    background:radial-gradient(50% 90% at 50% 40%, rgba(177,138,60,.12), transparent 65%);
+  }
+  .contact > *{ position:relative; z-index:1; }
+  .contact .r-lead{ font-family:var(--serif); font-size:clamp(1.6rem,4vw,2.5rem); line-height:1.6; letter-spacing:.05em; color:var(--head); }
+  .contact .r-sub{ color:var(--muted); margin-top:1.2rem; font-size:.95rem; }
+  .c-actions{ display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2.8rem; }
+  .c-tel{
+    font-family:var(--lat); font-size:1.5rem; letter-spacing:.06em; color:var(--head);
+    border:1px solid var(--line); padding:1rem 2rem; border-radius:2px; transition:border-color .3s, color .3s; background:var(--paper-2);
+  }
+  .c-tel span{ display:block; font-family:var(--sans); font-size:.68rem; letter-spacing:.28em; color:var(--muted); margin-bottom:.2rem; }
+  .c-tel:hover{ border-color:var(--gold); color:var(--gold-hi); }
+  .c-mail{
+    display:inline-flex; flex-direction:column; align-items:flex-start; justify-content:center;
+    padding:1rem 2rem; background:var(--gold); color:#fff;
+    border-radius:2px; transition:background .3s, transform .3s; letter-spacing:.04em;
+  }
+  .c-mail span{ font-size:.68rem; letter-spacing:.24em; opacity:.85; margin-bottom:.15rem; }
+  .c-mail b{ font-weight:500; font-size:1.02rem; }
+  .c-mail:hover{ background:var(--gold-hi); transform:translateY(-2px); }
+
+  /* ---------- フッター ---------- */
+  footer{ padding:4rem var(--edge) 2.5rem; border-top:1px solid var(--line); position:relative; z-index:2; }
+  .foot-inner{ max-width:var(--maxw); margin-inline:auto; }
+  .foot-top{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:2rem; }
+  .foot-brand{ font-family:var(--lat); font-size:1.5rem; letter-spacing:.16em; color:var(--head); }
+  .foot-brand b{ color:var(--gold-hi); font-style:italic; }
+  .foot-brand .jp{ display:block; font-family:var(--serif); font-size:.8rem; letter-spacing:.2em; color:var(--muted); margin-top:.7rem; }
+  .foot-sns{ display:flex; gap:1.5rem; }
+  .foot-sns a{ font-size:.78rem; letter-spacing:.15em; color:var(--muted); font-family:var(--lat); font-style:italic; transition:color .3s; }
+  .foot-sns a:hover{ color:var(--gold-hi); }
+  .foot-copy{ margin-top:3rem; font-size:.72rem; letter-spacing:.12em; color:var(--muted); }
+
+  /* ---------- スクロール演出 ---------- */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  /* ---------- モバイル ---------- */
+  .mobile-nav{
+    position:fixed; inset:0; z-index:45; background:rgba(246,242,233,.98); backdrop-filter:blur(6px);
+    display:flex; flex-direction:column; justify-content:center; align-items:center; gap:1.8rem;
+    opacity:0; visibility:hidden; transition:opacity .4s;
+  }
+  .mobile-nav.open{ opacity:1; visibility:visible; }
+  .mobile-nav a{ font-family:var(--serif); font-size:1.4rem; letter-spacing:.1em; color:var(--head); }
+  .mobile-nav a .en{ font-family:var(--lat); font-style:italic; color:var(--gold-hi); font-size:.85rem; margin-left:.8em; }
+
+  @media (max-width:860px){
+    nav.desk{ display:none; }
+    .burger{ display:block; z-index:60; position:relative; }
+    .burger.on span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+    .burger.on span:nth-child(2){ opacity:0; }
+    .burger.on span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+    .concept-grid{ grid-template-columns:1fr; }
+    .concept.reverse .concept-grid{ direction:ltr; }
+    .art-panel{ aspect-ratio:4/3; }
+    .guide-cards{ grid-template-columns:1fr; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none!important; scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hdr-inner">
+    <a class="brand" href="#top">Kojima <b>Yumi</b><span class="jp">小島由美</span></a>
+    <nav class="desk">
+      <a href="#glasritzen">グラスリッツェン</a>
+      <a href="#kintsugi">金継ぎ</a>
+      <a href="#duo">組み合わせ</a>
+      <a href="#guide">ご案内</a>
+      <a href="#follow">SNS</a>
+      <a class="book-btn" href="#contact">お問い合わせ</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mnav">
+  <a href="#glasritzen">グラスリッツェン<span class="en">Glasritzen</span></a>
+  <a href="#kintsugi">金継ぎ<span class="en">Kintsugi</span></a>
+  <a href="#duo">組み合わせ<span class="en">Glasritzen × Kintsugi</span></a>
+  <a href="#guide">ご案内<span class="en">Information</span></a>
+  <a href="#follow">SNS<span class="en">Instagram</span></a>
+  <a href="#contact">お問い合わせ<span class="en">Contact</span></a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-inner reveal">
+    <p class="kicker">Glasritzen<span class="sep">·</span>Kintsugi</p>
+    <h1 class="wordmark"><span class="g">ガラスに彫る、光。</span><br><span class="k">うつわに継ぐ、金。</span></h1>
+    <p class="sub">グラスリッツェン教室 ・ 金継ぎ教室</p>
+    <p class="lead">透明なガラスに、ダイヤモンドの先で模様を描く。割れたうつわを、漆と金でよみがえらせる。ひとつひとつ、<span class="nb">手のなかで。</span></p>
+    <p class="signature"><span>講師</span>Kojima Yumi ／ 小島 由美</p>
+  </div>
+</section>
+
+<!-- ============ CONCEPT 1 : グラスリッツェン ============ -->
+<section class="concept wrap" id="glasritzen">
+  <div class="concept-grid">
+    <div class="concept-copy reveal">
+      <span class="eyebrow">Glasritzen<span class="jp">グラスリッツェン</span></span>
+      <p class="big">ダイヤモンドの先で、<br><span class="accent-s">ガラスに絵を描く。</span></p>
+      <p>グラスリッツェンは、ダイヤモンドの刃先で透明なガラスの表面を細かく削り、模様を彫り出すドイツ生まれの技法です。彫った線が光を受け、銀白色にやわらかくきらめきます。</p>
+      <p>お名前や記念日を入れた、世界にひとつのグラス。贈りものにも、暮らしの一点にも。教室では、はじめての方も道具の持ち方から、ていねいにお伝えしています。</p>
+    </div>
+    <div class="art-panel reveal">
+      <img src="images/glass02.png" alt="グラスリッツェンで植物模様を彫ったワイングラス">
+      <span class="tag">Engraved Glass</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONCEPT 2 : 金継ぎ ============ -->
+<section class="concept reverse wrap" id="kintsugi">
+  <div class="concept-grid">
+    <div class="concept-copy reveal">
+      <span class="eyebrow">Kintsugi<span class="jp">金継ぎ</span></span>
+      <p class="big">割れたうつわを、<br><span class="accent">金でよみがえらせる。</span></p>
+      <p>金継ぎは、欠けや割れを漆で丁寧に継ぎ、仕上げに金をほどこす日本の伝統技法です。傷を隠すのではなく、その景色ごと受けとめて、新しい美しさに変えていきます。</p>
+      <p>思い出のうつわ、手放せない一枚。もう一度使えるように、そして前より愛おしくなるように。教室・お直しのご相談を承っています。</p>
+    </div>
+    <div class="art-panel reveal">
+      <img src="images/glass04.png" alt="金彩をほどこしたガラスの器">
+      <span class="tag">Kintsugi</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONCEPT 3 : グラスリッツェン × 金継ぎ ============ -->
+<section class="concept wrap" id="duo">
+  <div class="concept-grid">
+    <div class="concept-copy reveal">
+      <span class="eyebrow">Glasritzen × Kintsugi<span class="jp">組み合わせ</span></span>
+      <p class="big">加えることも、繕うことも。<br><span class="accent">手のぬくもりで。</span></p>
+      <p>グラスリッツェンは、なにもないガラスに光の模様を「加える」技。金継ぎは、こわれたうつわを「繕い直す」技。生み出す向きは逆でも、根っこは同じ——時間をかけ、手のなかで、ものをいっそう愛おしくしていくこと。</p>
+      <p>彫りと金継ぎ、ふたつを組み合わせたひとつの作品づくりや、ご相談も承っています。</p>
+    </div>
+    <div class="art-panel reveal">
+      <img src="images/glass05.png" alt="金彩で睡蓮を彫った、グラスリッツェンのガラスの器">
+      <span class="tag">Glasritzen × Kintsugi</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ご案内（LPへ誘導） ============ -->
+<section class="guide wrap" id="guide">
+  <div class="guide-head reveal">
+    <span class="eyebrow">Information<span class="jp">ご案内</span></span>
+    <p class="r-lead">出展・イベントのご案内</p>
+    <p class="r-sub">開催予定のイベントです。各ページから詳しいご案内をご覧いただけます。</p>
+  </div>
+  <div class="guide-cards">
+    <a class="guide-card reveal" href="lp/index01.html">
+      <span class="gc-bg" style="background-image:url('images/event01.png')"></span>
+      <div class="gc-body">
+        <span class="gc-eyebrow">Marché</span>
+        <h3 class="gc-title">秋のハンドメイドマルシェ</h3>
+        <p class="gc-meta">2026.10.11(日)・11.22(日)　10:00–14:00<br>葛西用水ウッドデッキ（越谷）</p>
+        <span class="gc-more">ご案内をみる</span>
+      </div>
+    </a>
+    <a class="guide-card reveal" href="lp/index02.html">
+      <span class="gc-bg" style="background-image:url('images/event02.png')"></span>
+      <div class="gc-body">
+        <span class="gc-eyebrow">Exhibition</span>
+        <h3 class="gc-title">Glass Ensamble 展示・販売</h3>
+        <p class="gc-meta">2026.11.13(金)–15(日)　9:00–18:00<br>CAFE803（越谷市越ヶ谷）</p>
+        <span class="gc-more">ご案内をみる</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ SNS（Instagramのみ） ============ -->
+<section class="sns-follow wrap" id="follow">
+  <span class="eyebrow reveal">Follow<span class="jp">SNS</span></span>
+  <h2 class="sec-title reveal">日々の作品を、Instagramで。</h2>
+  <div class="sns2 reveal">
+    <a class="sns2-card" href="https://www.instagram.com/kojima5211/" target="_blank" rel="noopener" aria-label="Instagram @kojima5211">
+      <svg class="sns2-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.4"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+      <span class="sns2-name">Instagram</span>
+      <span class="sns2-handle">@kojima5211</span>
+      <span class="sns2-desc">グラスリッツェンや金継ぎの作品、教室の様子を投稿しています。</span>
+      <span class="sns2-more">フォローする</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section class="contact wrap" id="contact">
+  <span class="eyebrow reveal">Contact<span class="jp">お問い合わせ</span></span>
+  <p class="r-lead reveal">教室・お直しのご相談、<br>お気軽にどうぞ。</p>
+  <p class="r-sub reveal">お電話、またはメールにてお問い合わせいただけます。</p>
+  <div class="c-actions reveal">
+    <a class="c-tel" href="tel:09053472041"><span>Tel · お電話</span>090-5347-2041</a>
+    <a class="c-mail" href="mailto:deux.bijou@gmail.com"><span>Mail · メール</span><b>deux.bijou@gmail.com</b></a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+  <div class="foot-top">
+    <div>
+      <div class="foot-brand">Kojima <b>Yumi</b>
+        <span class="jp">小島由美 ｜ グラスリッツェン教室・金継ぎ教室</span>
+      </div>
+    </div>
+    <div class="foot-sns">
+      <a href="https://www.instagram.com/kojima5211/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:deux.bijou@gmail.com">Mail</a>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 Kojima Yumi — This is a demo site.</p>
+  </div>
+</footer>
+
+<script>
+  // ヘッダーの背景切り替え
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+
+  // モバイルナビ
+  const burger = document.getElementById('burger');
+  const mnav = document.getElementById('mnav');
+  const toggleNav = (open) => {
+    burger.classList.toggle('on', open);
+    mnav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => toggleNav(!mnav.classList.contains('open')));
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
+
+  // スクロール・リビール
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.14 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
